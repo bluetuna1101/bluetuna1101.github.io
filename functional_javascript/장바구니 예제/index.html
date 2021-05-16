@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML 출력해보기 - 장바구니</title>
-  <script src="../lib/fx.js"></script>
+  <script src="../장바구니 예제/fx.js"></script>
 </head>
 <body>
 
@@ -20,15 +20,14 @@
   ];
 
   const add = (a, b) => a + b;
-
+  // sum 함수를 가지고 아래 html도 돌아가게 할 수 있다.
   const sum = curry((f, iter) => go(
     iter,
     map(f),
     reduce(add)));
 
-  const total_quantity = sum(p => p.quantity);
-
-  const total_price = sum(p => p.price * p.quantity);
+  const total_quantity = sum(p => p.quantity); // 총 수량
+  const total_price = sum(p => p.price * p.quantity); // 총 가격
 
   document.querySelector('#cart').innerHTML = `
     <table>
