@@ -1,10 +1,10 @@
-<script>const log = console.log;</script>
+const log = console.log
 
-## 기존과 달라진 ES6에서의 리스트 순회
-- for i++(기존)
-- for of(ES6)
+// ## 기존과 달라진 ES6에서의 리스트 순회
+// - for i++(기존)
+// - for of(ES6)
 
-<script>
+
   const list = [1, 2, 3];
   for (var i = 0; i < list.length; i++) {
     // log(list[i]);
@@ -19,45 +19,44 @@
   for (const a of str) {
     // log(a);
   }
-</script>
 
-### Array를 통해 알아보기
-next 메서드로 실행되면서 value 를 리턴하고 done이 true가 되면 for of 문은 종료가 된다
+// ### Array를 통해 알아보기
+// next 메서드로 실행되면서 value 를 리턴하고 done이 true가 되면 for of 문은 종료가 된다
 
-<script>
+
   log('Arr -----------');
   const arr = [1, 2, 3];
   let iter1 = arr[Symbol.iterator]();
   for (const a of iter1) log(a);
-</script>
 
-### Set을 통해 알아보기
+// ### Set을 통해 알아보기
 
-<script>
+
   log('Set -----------');
   const set = new Set([1, 2, 3]);
   for (const a of set) log(a);
-</script>
 
-### Map을 통해 알아보기
+// ### Map을 통해 알아보기
 
-<script>
+
   log('Map -----------');
   const map = new Map([['a', 1], ['b', 2], ['c', 3]]);
   for (const a of map.keys()) log(a); // a b c
   for (const a of map.values()) log(a); // 1 2 3
   for (const a of map.entries()) log(a); // [ 'a', 1 ] [ 'b', 2 ] [ 'c', 3 ]
   console.clear();
-</script>
 
-## 이터러블/이터레이터 프로토콜
-- 이터러블: 이터레이터를 리턴하는 [Symbol.iterator]() 를 가진 값
-- 이터레이터: { value, done } 객체를 리턴하는 next() 를 가진 값
-- 이터러블/이터레이터 프로토콜: 이터러블을 for...of, 전개 연산자 등과 함께 동작하도록한 규약
+// ## 이터러블/이터레이터 프로토콜
+// - 이터러블: 이터레이터를 리턴하는 [Symbol.iterator]() 를 가진 값
+// - 이터레이터: { value, done } 객체를 리턴하는 next() 를 가진 값
+// - 이터러블/이터레이터 프로토콜: 이터러블을 for...of, 전개 연산자 등과 함께 동작하도록한 규약
+// - iterator 이면서 iterable인 객체를 well-formed iterable이라고 한다 . 즉, 자기 자신의 상태를 기억할 수 있다는 뜻.
+//   let iter = gen();
+//   log(iter[Symbol.iterator]() == iter); = true 가 나옴
 
-### 사용자 정의 이터러블을 통해 알아보기
+// ### 사용자 정의 이터러블을 통해 알아보기
 
-<script>
+
   const iterable = {
     [Symbol.iterator]() {
       let i = 3;
@@ -91,13 +90,11 @@ next 메서드로 실행되면서 value 를 리턴하고 done이 true가 되면 
   log(iter3.next());
   log(iter3.next());
   log(iter3.next());
-</script>
 
-## 전개 연산자
+// ## 전개 연산자
 
-<script>
+
   console.clear();
   const a = [1, 2];
   // a[Symbol.iterator] = null;
   log([...a, ...arr, ...set, ...map.keys()]);
-</script>
