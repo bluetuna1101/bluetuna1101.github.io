@@ -46,7 +46,7 @@
   console.clear();
 </script>
 
-## take
+## take 리밋과 이터러블을 받는다
 
 <script>
   const take = curry((l, iter) => {
@@ -67,7 +67,7 @@
 
   console.time('');
   go(
-    L.range(10000),
+    L.range(10000), //array 를 100000 안하고 5개만 뽑기때문에 5배정도 빠르다
     take(5),
     reduce(add),
     log);
