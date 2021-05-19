@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <style>
+  </style>
+  <div id="app">
+    <ul>
+      <!-- 하나의 클릭이벤트에 2개의 함수를 한번에 실행하려면 함수 사이에 ; 를 넣어주고 띄어쓰기를 해주고 ()를 꼭 붙여준다 -->
+      <li v-for="(todo, index) in todos" :key="index" 
+          @click="clickMethod1(todo.title, $event); clickMethod2()"
+          :class="'item-' + (index + 1)">
+        {{ todo.title }}
+      </li>
+    </ul>
+  </div>
+  <script>
+  const vm = new Vue({
+    el: "#app",
+    data: {
+      todos: [
+        { title: '아침 먹기' },
+        { title: '점심 먹기' },
+        { title: '저녁 먹기' }
+      ]
+    },
+    methods: {
+      clickMethod1 (title, event) {
+        console.log('click 1')
+        console.log(title)
+        console.log(event.currentTarget.className)
+      },
+      clickMethod2 () {
+        console.log('click 2')
+      }
+    }
+  })
+  </script>
+</body>
+</html>
