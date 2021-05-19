@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <style>
+
+  </style>
+  <div id="app">
+    <!-- my-msg 는 밑에 props 에 카멜케이스로 작성 되었지만 html에서는 케밥 케이스로 작성 해 주어야 한다 -->
+    <my-comp :my-msg="message"></my-comp>
+  </div>
+  <script>
+    Vue.component('my-comp', {
+      template: '<div>{{ myMsg }}</div>',
+      props: {
+        //js 에서는 카멜 케이스로 작성
+        myMsg: {
+          // type 문자열, 숫자 둘다 받겠다
+          type: [String, Number],
+          // msg 안넘어오면 기본값 설정
+          default: 'Default!',
+          // msg 는 필수 속성이다
+          required: true,
+          // 유효성 검사 함수여야 한다
+          validator (value) {
+            return value === 'Hello'
+          }
+        }
+      }
+    })
+  const vm = new Vue({
+    el: "#app",
+    data() {
+      return {
+        message: 'Hello'
+      }
+    },
+  })
+  </script>
+</body>
+</html>
