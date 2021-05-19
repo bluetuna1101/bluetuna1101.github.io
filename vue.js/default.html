@@ -6,17 +6,35 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+    .box--red {
+      background: red;
+    }
+    .box--blue {
+      background: blue;
+    }
+    .box--gray {
+      background: gray;
+    }
+  </style>
+
   <div id="app">
+    <!-- v-ir v-else-if v-else 모두 붙어있는 형제 요소여야 한다 -->
+    <div v-if="colorState === 'red'" class="box box--red"></div>
+    <div v-else-if="colorState === 'blue'" class="box box--blue"></div>
+    <div v-else class="box box--gray"></div>
   </div>
 
-  <style>
 
-  </style>
   <script>
   const vm = new Vue({
     el: "#app",
     data: {
-      
+      colorState: 'blu'
     },
   })
   </script>
