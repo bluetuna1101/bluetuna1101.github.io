@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div>{{  msg  }}</div>
+    <div>{{  reversedMsg }}</div>
+  </div>
+
+  <style>
+
+  </style>
+  <script>
+  const vm = new Vue({
+    el: "#app",
+    data: {
+      msg: 'hello vue!'
+    },
+    computed: {
+      reversedMsg: {
+        // getter
+        get() {
+          return this.msg.split('').reverse().join('')
+        },
+        // Setter
+        set (v) {
+          this.msg = v
+        }
+      }
+    },
+    // 특정한 데이터를 뷰가 감시하고 있다가, 그 데이터가 변경시 로직을 수행하게 하는것이 워치 이다 (비동기 처리에도 용이)
+    watch: {
+      // msg가 변경되면 실행될 함수
+      msg(newMsg) {
+        console.log('new msg: ' + newMsg)
+      },
+      reversedMsg (newMsg) {
+        console.log('new reversed: ' + newMsg)
+      }
+    }
+  })
+  </script>
+</body>
+</html>
