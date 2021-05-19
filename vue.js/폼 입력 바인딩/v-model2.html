@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <style>
+
+  </style>
+  <div id="app">
+    <!-- change : 변경이 됐을때 값이 바뀌게 .lazy로 같은효과 낼 수 있다-->
+    <input type="text" v-model.lazy="message">
+    <div>{{message}}</div>
+
+    <!-- input에서는 숫자도 문자 데이터로 들어간다 .number(=parseFloat)로 해결 가능 
+    parseInt, parseFloat 같은 기능
+    -->
+    <div>{{typeof message}}</div>
+
+    <!-- .lazy와 같은 효과 코드 <input type="text" @change="message = $event.target.value" :value="message">
+    <div>{{message}}</div> -->
+
+    <!-- trim 맨앞 맨뒤 공백 제거 -->
+    <!-- <input type="text" v-model.trim="message"> -->
+
+  </div>
+  <script>
+  const vm = new Vue({
+    el: "#app",
+    data: {
+      message: 'Hello',
+    },
+  })
+  </script>
+</body>
+</html>
