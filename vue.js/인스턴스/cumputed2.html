@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- 지금은 reverseMsg ()가 간단하지만 매우 길어진다면 3번 반복하는데 굉장한 부하를 줄 수 있다. -->
+    <div>{{  reverseMsg ()  }}</div>
+    <div>{{  reverseMsg ()  }}</div>
+    <div>{{  reverseMsg ()  }}</div>
+    <div>---------------------</div>
+    <!-- reversedMsg는 함수로 구현했지만 사용할땐 data 처럼 사용되기 대문에 함수가 아니다 -->
+    <!-- computed 는 캐싱이라는 기능이 있다. 처음 div를 띠울때는 연산을 하지만, 다음에 띄울때는 연산한 결과가 캐싱되있기 때문에
+    캐싱한 데이터에서 꺼내서 사용하기 때문에 계산을 1번만 하게된다 
+    함수 표현식을 직접적으로 탬플릿 문법안에 사용하는것 보다는 computed를 사용하는게 더욱 효과적인 방법이다.
+    -->
+    <div>{{  reversedMsg  }}</div>
+    <div>{{  reversedMsg  }}</div>
+    <div>{{  reversedMsg  }}</div>
+  </div>
+
+  <style>
+
+  </style>
+  <script>
+  const vm = new Vue({
+    el: "#app",
+    data: {
+      msg: 'Hello Vue !'
+    },
+    computed: {
+      reversedMsg() {
+        return this.msg.split('').reverse().join('')
+      }
+      // 위는 아래와 똑같은 식이다
+      // reversedMsg: {
+      //   // Getter
+      //   get() {
+      //     return this.msg.split('').reverse().join('')
+      //   },
+      // }  
+    },
+    methods: {
+      reverseMsg () {
+        return this.msg.split('').reverse().join('')
+      }
+    },
+  })
+  </script>
+</body>
+</html>
