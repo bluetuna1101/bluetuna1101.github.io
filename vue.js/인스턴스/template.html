@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <style>
+    .normal {
+      color: blue;
+    }
+    .active {
+      color: red;
+    }
+  </style>
+  <div id="app">
+    <!-- v-once 한번만 렌더링 하고 반응성은 안할거다 ! -->
+    <div v-once>{{  msg  }}</div>
+    <!-- 순수한 html에 태그를 삽입하려 하면 v-html을 사용! -->
+    <div v-html="msg">{{  msg  }}</div>
+    <!-- 보간 내에서는 js에 표현식을 다 사용 가능 -->
+    <div>{{number + 2}}</div>
+    <div>{{new Date()}}</div>
+    <div>{{Math.round(1.7)}}</div>
+
+    <!-- v-bind 생략 가능 v-bind:class === :class -->
+    <!-- v-on 생략 가능 v-on:click === @click -->
+    <div :class="className" @click="changeClassName">{{msg}}</div>
+  </div>
+
+  <script>
+  const vm = new Vue({
+    el: "#app",
+    data: {
+      msg: 'Hello Vue!<br/>Good job', // br 은 문자로 들어가고 html tag로 적용 안됨
+      number: 2,
+      className: 'normal'
+    },
+    methods: {
+      changeClassName() {
+        this.className = 'active'
+      }
+    }
+  })
+  </script>
+</body>
+</html>
