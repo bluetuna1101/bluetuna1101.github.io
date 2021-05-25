@@ -2,6 +2,7 @@
 const path = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 // 진입점 결과물 모듈 플러그인으로 생성되는 번들로 웹사이트를 돌릴 수 있다.
 module.exports = {
@@ -45,6 +46,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       // html 경로 (이 플러그인이 인덱스를 가져가서 디스트로 만들어준다)
       template: path.join(__dirname, 'index.html')
-    })
+    }),
+    // 특정한 디랙토리나 파일들을 특정한 경로로 카피해줌
+    new CopyPlugin([
+      {
+        from: 'assets/',
+        // 입력하지 않으면 위에 설정한 output으로 생긴다
+        to: ''
+      }
+    ])
   ],
 }
