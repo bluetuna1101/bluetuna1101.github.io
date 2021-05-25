@@ -1,6 +1,7 @@
 // nodejs 
 const path = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // 진입점 결과물 모듈 플러그인으로 생성되는 번들로 웹사이트를 돌릴 수 있다.
 module.exports = {
@@ -40,6 +41,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new HtmlWebpackPlugin({
+      // html 경로 (이 플러그인이 인덱스를 가져가서 디스트로 만들어준다)
+      template: path.join(__dirname, 'index.html')
+    })
   ],
 }
