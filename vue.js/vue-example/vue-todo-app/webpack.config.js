@@ -60,4 +60,10 @@ module.exports = {
     }),
     new CleanWebpackPlugin()
   ],
+  // devServer: {
+  //   open: false,
+  //   hot: true
+  // },
+  // eval build 시간이 짧아짐 <-> cheap-module-source-map
+  devtool: 'eval'
 }
