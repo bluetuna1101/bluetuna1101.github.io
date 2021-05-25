@@ -1,5 +1,6 @@
 // nodejs 
 const path = require('path')
+const { VueLoaderPlugin } = require('vue-loader')
 
 // 진입점 결과물 모듈 플러그인으로 생성되는 번들로 웹사이트를 돌릴 수 있다.
 module.exports = {
@@ -13,6 +14,15 @@ module.exports = {
     filename: '[name].js', // app.js
     path: path.join(__dirname, 'dist')
   },
-  module: {},
-  plugins: [],
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+    ]
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ],
 }
