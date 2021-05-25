@@ -19,7 +19,24 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
+      },
+      {
+        //vue 에서 <script> 를 사용하기 위함
+        test: /\.js$/,
+        // node_modules 안에 파일은 굳이 바벨 로더로 해석할 필요가 없다고 명시(exclude 사용)
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        //vue 에서 <style> 를 사용하기 위함
+        test: /\.css$/,
+        // 2개 이상은 use 동작하는 순서대로 입력해 줘야함
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
       }
+
     ]
   },
   plugins: [
