@@ -1,6 +1,7 @@
 // nodejs 
 const path = require('path')
 
+// 진입점 결과물 모듈 플러그인으로 생성되는 번들로 웹사이트를 돌릴 수 있다.
 module.exports = {
   // 진입점
   entry: {
@@ -13,5 +14,5 @@ module.exports = {
     path: path.join(__dirname, 'dist')
   },
   module: {},
-  plugins: {},
+  plugins: [],
 }
