@@ -14,3 +14,10 @@ plugins : 모듈이 처리 되고나서 추가적으로 어떤 작업을 더 진
 babel-loader: 웹팩(Webpack) 지원을 위해 사용합니다.
 @babel/ployfill: 구형 브라우저 지원용(너무 많은 코드가 들어가있어서 구형브라우저를 지원할 필요가 없다면 설치하지 않는것이 좋다)
 .babelrc 파일을 만들고 설정해줘야한다
+
+## css
+
+전처리 - css - 후처리
+
+preprocessor 전처리 : LESS SASS(scss) stylus : css 갖지않는 변수 등 지원함
+postCSS 후처리 : Autoprefixer(공급업체접두사: 크롬, IE, ofera / 접두사? -webkit- -ms-)
