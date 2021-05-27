@@ -41,15 +41,19 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss.$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          'vue-style-loader',
-          'css-loader',
-          //scss도 쓸수 있음
-          'sass-loader',
-        ]
+          "vue-style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              // Prefer `dart-sass`
+              implementation: require("sass"),
+            },
+          },
+        ],
       }
-
     ]
   },
   plugins: [
