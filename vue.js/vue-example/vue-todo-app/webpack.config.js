@@ -37,7 +37,9 @@ module.exports = {
         // 2개 이상은 use 동작하는 순서대로 입력해 줘야함
         use: [
           'vue-style-loader',
-          'css-loader'
+          'css-loader',
+          // 후처리
+          'postcss-loader'
         ]
       },
       {
@@ -45,6 +47,7 @@ module.exports = {
         use: [
           "vue-style-loader",
           "css-loader",
+          "postcss-loader",
           {
             loader: "sass-loader",
             options: {
