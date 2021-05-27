@@ -47,6 +47,7 @@ module.exports = {
         use: [
           "vue-style-loader",
           "css-loader",
+          // postcss loader 는 postcss 가 필요함.
           "postcss-loader",
           {
             loader: "sass-loader",
