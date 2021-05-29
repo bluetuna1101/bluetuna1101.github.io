@@ -6,12 +6,13 @@
 </template>
 
 <script>
-import TodoCreator from "./TodoCreator"
-import TodoItem from "./TodoItem"
+import TodoItem from "./TodoItem.vue"
+import TodoCreator from "./TodoCreator.vue"
+
 export default {
   components: {
-    TodoCreator,
-    TodoItem,
+    "todo-item": TodoItem,
+    "todo-creator": TodoCreator,
   },
 }
 </script>
