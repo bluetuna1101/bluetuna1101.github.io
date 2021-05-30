@@ -21,13 +21,18 @@
 - 전체선택자(*)는 뒤에사용하면 브라우저 성능 저하가 올 수 있다
 - id 선택자는 한 html 파일에 하나여야 함으로 조심히 사용
 - border none 보다는 border 0사용
+- import 사용 자제
+- 에니메이션 시 height width 대신 transform: scale / top right bottom 대신 transform: translate 사용
+   예를 들어, 어떤 요소의 너비를 바꾸게 되면, 그 자식 요소들 까지 영향을 미치면서 페이지 내부에서 큰 레이아웃이 발생할 수 있음
+- base 64 는 피한다
+- extend vs mixin -> mixin이(다 따로따로 정의) 더 퍼포먼스가 좋다
 
 #### 줄바꿈과 들여쓰기
 - 중괄호, 세미콜론 다음에 줄 바꿈 권장
 - 공백 2칸을 권장
 - 빈줄을 사용하지 않기
 
-#### 속성 우선순위 (권장)
+<!-- #### 속성 우선순위 (권장) abc순서가 더 좋다는 말도 있음
 
 1. display
 2. list-style
@@ -42,4 +47,4 @@
 11. text-align / vertical-align
 12. white-space
 13. other text
-14. content
+14. content -->
