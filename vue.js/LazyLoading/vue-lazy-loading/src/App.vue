@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    <h1>this is LazyLoading</h1>
     <ImageList />
+    
   </div>
 </template>
 

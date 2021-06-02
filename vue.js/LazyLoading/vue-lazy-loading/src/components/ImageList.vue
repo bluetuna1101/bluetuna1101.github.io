@@ -1,6 +1,6 @@
 <template>
   <div class="img-list">
-    <ImageItem img-src="https://picsum.photos/id/1/600/600" /> <!-- 이미지 URL을 전달 -->
+      <ImageItem  v-for="n in 100" :img-src="'https://picsum.photos/id/'+n+'/600/600'"  :key="n" />
   </div>
 </template>
 
@@ -10,10 +10,8 @@ import ImageItem from './ImageItem'
 export default {
   name: 'ImageList',
   components: {
-    ImageItem,
+      ImageItem,
   },
-  props: {
-  }
 }
 </script>
 
