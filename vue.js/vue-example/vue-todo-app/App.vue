@@ -3,10 +3,11 @@
 </template>
 
 <script>
-import TodoApp from "./components/TodoApp.vue"
+import TodoApp from './components/TodoApp'
+
 export default {
   components: {
-    "todo-app": TodoApp,
-  },
+    TodoApp
+  }
 }
 </script>

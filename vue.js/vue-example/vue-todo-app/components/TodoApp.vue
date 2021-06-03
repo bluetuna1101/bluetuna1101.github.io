@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="todo-app">
     <todo-item />
     <todo-creator />
   </div>
@@ -9,19 +9,19 @@
 // 노드 모듈에서 가져오는 모듈은 상단에
 import low from 'lowdb'
 import LocalStorage from 'lowdb/adapters/LocalStorage'
-import TodoCreator from "./TodoCreator.vue"
-import TodoItem from "./TodoItem.vue"
+import TodoCreator from './TodoCreator'
+import TodoItem from './TodoItem'
 
 export default {
   name: 'TodoApp',
   components: {
-    "todo-creator": TodoCreator,
-    "todo-item": TodoItem,
+    TodoCreator,
+    TodoItem
   },
   data() {
     return {
       db: null,
-      // todos: [],
+      todos: [],
     }
   },
   created() {

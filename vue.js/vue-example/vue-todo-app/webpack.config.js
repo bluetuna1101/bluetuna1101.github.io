@@ -1,88 +1,100 @@
-// nodejs 
-const path = require('path')
-const {VueLoaderPlugin} = require('vue-loader')
+const path = require('path') // 파일이나 디렉터리 경로를 다루기 위한 NodeJS 기본 모듈
+const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-// clean 은 빌드를 할때마다 output 내용을 지우고 다시 생성한다
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin')
+require('@babel/polyfill')
 
-// 진입점 결과물 모듈 플러그인으로 생성되는 번들로 웹사이트를 돌릴 수 있다.
-module.exports = {
-  // 진입점
-  entry: {
-    // node 전역 변수 __dirname 현제 파일의 경로
-    app: path.join(__dirname,'main.js')
-  },
-  // 결과물에 대한 설정
-  output: {
-    filename: '[name].js', // app.js
-    path: path.join(__dirname, 'dist')
-  },
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      },
-      {
-        //vue 에서 <script> 를 사용하기 위함
-        test: /\.js$/,
-        // node_modules 안에 파일은 굳이 바벨 로더로 해석할 필요가 없다고 명시(exclude 사용)
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
-        //vue 에서 <style> 를 사용하기 위함
-        test: /\.css$/,
-        // 2개 이상은 use 동작하는 순서대로 입력해 줘야함
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          // 후처리
-          'postcss-loader'
-        ]
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          "vue-style-loader",
-          "css-loader",
-          // postcss loader 는 postcss 가 필요함.
-          "postcss-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              // Prefer `dart-sass`
-              implementation: require("sass"),
-            },
-          },
-        ],
-      }
-    ]
-  },
-  plugins: [
-    new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
-      // html 경로 (이 플러그인이 인덱스를 가져가서 디스트로 만들어준다)
-      template: path.join(__dirname, 'index.html')
-    }),
-    // 특정한 디랙토리나 파일들을 특정한 경로로 카피해줌
-    new CopyPlugin({
-      patterns: [
+module.exports = (env, opts) => {
+  const config = {
+    // 가져오기 확장자 생략 가능
+    resolve: {
+      extensions: ['.js', '.vue']
+    },
+    // 파일을 읽어들이기 시작하는 진입
+    // `__dirname`은 현재 파일의 위치를 알려주는 NodeJS 전역 변수
+    entry: {
+      app: [
+        '@babel/polyfill',
+        path.join(__dirname, 'main.js')
+      ]
+    },
+    // 결과물(번들)을 반환하는 설정
+    // `[name]`은 `entry`의 Key 이름, `app`
+    output: {
+      filename: '[name].bundle.js',
+      path: path.join(__dirname, 'dist')
+    },
+    // 모듈 처리 방식을 설정
+    module: {
+      rules: [{
+          test: /\.vue$/,
+          use: 'vue-loader'
+        },
         {
-          from: 'assets',
-          to: ''
+          test: /\.css$/,
+          use: [
+            'vue-style-loader', // 1st
+            'css-loader', // 2nd
+            'postcss-loader' // 3rd
+          ]
+        },
+        {
+          test: /\.scss$/,
+          use: [
+            'vue-style-loader', // 1st
+            'css-loader', // 2nd
+            'postcss-loader', // 3rd
+            'sass-loader' // 4th
+          ]
+        },
+        {
+          test: /\.?js$/,
+          exclude: /node_modules/, // 제외할
+          use: {
+            loader: 'babel-loader'
+          }
         }
       ]
-    }),
-    new CleanWebpackPlugin()
-  ],
-  // devServer: {
-  //   open: false,
-  //   hot: true
-  // },
-  // eval build 시간이 짧아짐 <-> cheap-module-source-map
-  devtool: 'eval'
+    },
+    // 번들링 후 결과물의 처리 방식 등 다양한 플러그인들을 설정
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, 'index.html')
+      }),
+      new VueLoaderPlugin(),
+      // assets 디렉터리의 내용을 `dist` 디렉터리에 복사합니다
+      new CopyPlugin([{
+        from: 'assets/',
+        to: ''
+      }])
+    ]
+  }
+
+  if (opts.mode === 'development') {
+    return merge(config, {
+      // 빌드 시간이 적고, 디버깅이 가능한 방식
+      devtool: 'eval',
+      devServer: {
+        // 자동으로 기본 브라우저를 오픈합니다
+        open: false,
+        // HMR, https://webpack.js.org/concepts/hot-module-replacement/
+        hot: true
+      }
+    })
+
+    // opts.mode === 'production'
+  } else {
+    return merge(config, {
+      // 용량이 적은 방식
+      devtool: 'cheap-module-source-map',
+      plugins: [
+        // 빌드(build) 직전 `output.path`(`dist` 디렉터리) 내 기존 모든 파일 삭제
+        new CleanWebpackPlugin()
+      ]
+    })
+  }
 }
-
-
