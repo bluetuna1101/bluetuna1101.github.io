@@ -19,6 +19,14 @@
           finish ({{ completedCount }})
         </button>
       </div>
+      <div class="actions">
+        <input 
+          v-model="allDone"
+          type="checkbox">
+        <button @click="clearCompleted">
+          완료 항목 삭제
+        </button>
+      </div>
     </div>
 
     <div class="todo-app__list">
@@ -48,6 +56,7 @@ import _cloneDeep from 'lodash/cloneDeep'
 import _find from 'lodash/find'
 import _assign from 'lodash/assign'
 import _findIndex from 'lodash/findIndex'
+import _forEachRight from 'lodash/forEachRight'
 import TodoCreator from './TodoCreator'
 import TodoItem from './TodoItem'
 
@@ -86,6 +95,14 @@ export default {
     completedCount() {
       return this.total - this.activeCount
     },
+    allDone: {
+      get() {
+        return this.total === this.completedCount && this.total > 0   
+      },
+      set(checkd) {
+        this.completeAll(checkd)
+      }
+    }
   },
   created() {
     this.initDB()
@@ -160,6 +177,48 @@ export default {
     },
     changeFilter (filter) {
       this.filter = filter
+    },
+    completeAll(checkd) {
+      // DB 갱신
+      const newTodos = this.db
+      .get('todos')
+      .forEach(todo => {
+        todo.done = checkd
+      })
+      .write()
+      // 로컬 todos 갱신
+      // this.todos.forEach(todo => {
+      //   todo.done = checked
+      // })
+      this.todos = _cloneDeep(newTodos)
+    },
+    clearCompleted() {
+      // 배열을 앞에서부터 삭제하면 원하는 인덱스를 삭제 못한다(앞에꺼를 지우고 배열이 밀림). 
+      // this.todos.forEach(todo => {
+      //   if (todo.done) {
+      //     this.deleteTodo(todo)
+      //   }
+      // })
+
+      // 따라서 뒤에서부터 제거해야 한다
+      // js native 로 작성
+      // this.todos
+      //   .reduce((list, todo, index) => {
+      //     if (todo.done) {
+      //       list.push(index)
+      //     }
+      //     return list 
+      //   }, [])
+      //   .reverse()
+      //   .forEach(index => {
+      //     this.deleteTodo(this.todos[index])
+      //   })
+
+      _forEachRight(this.todos, todo => {
+        if (todo.done) {
+          this.deleteTodo(todo)
+        }
+      })
     }
   },
 }
