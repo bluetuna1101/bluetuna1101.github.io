@@ -1,20 +1,54 @@
 <template>
-  <div class="todo-item">
-    <input 
-      v-model="done"
-      type="checkbox"
+  <div 
+    :class="{ done }"
+    class="todo-item">
+    <div
+      v-if="isEditMode"
+      class="item__inner item--edit"
     >
-    <div class="item__title-wrap">
-      <div class="item__title">
-        {{ todo.title }}
-      </div>
-      <div class="item__date">
-        {{ date }}
+        <!-- 뷰 속성 ref  -->
+      <input
+        ref="titleInput"
+        :value="editedTitle"
+        type="text"
+        @input="editedTitle = $event.target.value"
+        @keypress.enter="editedTodo"
+        @keypress.esc="offEditMode"
+        >
+      <div class="item__actions">
+        <!-- button에 키를 추가해줘서 vue js 가 비슷한 양식으로 작성된 엘리멘트가 다르다고 인식시켜준다 -->
+        <button 
+          key="complete"
+          @click="editedTodo">완료</button>
+        <button 
+          key="cancel"
+          @click="offEditMode">취소</button>
       </div>
     </div>
-    <div class="item__actions">
-      <button @click="onEditMode">수정</button>
-      <button @click="deleteTodo">삭제</button>
+    <div 
+      v-else
+      class="item__inner item--normal"
+    >
+    <input 
+        v-model="done"
+        type="checkbox"
+      >
+      <div class="item__title-wrap">
+        <div class="item__title">
+          {{ todo.title }}
+        </div>
+        <div class="item__date">
+          {{ date }}
+        </div>
+      </div>
+      <div class="item__actions">
+        <button
+          key="update"
+          @click="onEditMode">수정</button>
+        <button 
+          key="delete"
+          @click="deleteTodo">삭제</button>
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +58,12 @@ import dayjs from 'dayjs'
 export default {
   props: {
     todo: Object
+  },
+  data() {
+    return {
+      isEditMode: false,
+      editedTitle: ''
+    }
   },
   computed: {
     // 객체리터럴 상태를 가지고옴
@@ -52,11 +92,28 @@ export default {
     }
   },
   methods: {
+    editedTodo() {
+      // 수정을 해야만 업데이트 투두 매써드가 실행되게
+      if(this.todo.title !== this.editedTitle) {
+        this.updateTodo({
+          title: this.editedTitle,
+          updatedAt: new Date()
+        }) 
+      }
+      this.offEditMode()
+    },
     onEditMode() {
+      this.isEditMode = true
+      this.editedTitle = this.todo.title
 
+      //ref titleInput을 찾아서 포커싱
+      //nextTick dom 사이클 이후 실행하는 콜백을 연기합니다
+      this.$nextTick(() => {
+        this.$refs.titleInput.focus()
+      })
     },
     offEditMode() {
-
+      this.isEditMode = false
     },
     updateTodo(value) {
       this.$emit('update-todo', this.todo, value)
@@ -67,3 +124,20 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+  .todo-item {
+    margin-bottom: 10px;
+    .item__inner {
+      display: flex;
+    }
+    .item__date {
+      font-size: 12px ;
+    }
+    &.done {
+      .item__title {
+        text-decoration: line-through;
+      }
+    }
+  }
+</style>
