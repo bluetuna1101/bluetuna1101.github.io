@@ -224,10 +224,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  button.active {
-    font-weight: bold;
-    background: blue;
-    color: #fff;
-  }
+<style lang="scss">
+  @import "../scss/style"
 </style>

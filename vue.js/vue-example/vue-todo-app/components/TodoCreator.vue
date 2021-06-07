@@ -1,6 +1,8 @@
 <template>
   <div>
-    <button @click="createTodo">추가</button>
+    <button @click="createTodo">
+      <i class="material-icons">add</i>
+    </button>
     <!-- 작성 순서 : 바인딩 - 일반 - 이벤트 -->
     <input
       :value="title"
@@ -33,6 +35,11 @@ export default {
       this.$emit('create-todo', this.title)
       // 입력 후 타이틀 초기화 시켜줌
       this.title = ''
+
+      // 새로운값 입력하면 화면 하단으로 이동되게
+      this.$nextTick(() => {
+        window.scrollTo(0, document.body.scrollHeight)
+      })
     }
   }
 }
