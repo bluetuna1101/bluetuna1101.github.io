@@ -19,13 +19,24 @@
           finish ({{ completedCount }})
         </button>
       </div>
-      <div class="actions">
-        <input 
-          v-model="allDone"
-          type="checkbox">
-        <button @click="clearCompleted">
-          완료 항목 삭제
-        </button>
+      <div class="actions clearfix">
+        <div class="float--left">
+          <label>
+          <input v-model="allDone" type="checkbox">
+          <span class="icon"><i class="material-icons">done_all</i></span>
+          </label>
+        </div>
+        <div class="float--right clearfix">
+          <button @click="scrollToTop" class="btn float--left">
+            <i class="material-icons">expand_less</i>
+          </button>
+          <button @click="scrollToBottom" class="btn float--left">
+            <i class="material-icons">expand_more</i>
+          </button>
+          <button class="btn btn--danger float--left" @click="clearCompleted">
+            <i class="material-icons">delete_sweep</i>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -39,7 +50,6 @@
     />
     </div>
 
-    <hr>
     <!-- 자식인 todo-creator의 create-todo 이벤트가 실행될때 부모인 TodoApp 의 createTodo 메서드가 실행된다 -->
     <todo-creator
       class="todo-app__creator"
@@ -57,6 +67,7 @@ import _find from 'lodash/find'
 import _assign from 'lodash/assign'
 import _findIndex from 'lodash/findIndex'
 import _forEachRight from 'lodash/forEachRight'
+import scrollTo from 'scroll-to'
 import TodoCreator from './TodoCreator'
 import TodoItem from './TodoItem'
 
@@ -108,6 +119,16 @@ export default {
     this.initDB()
   },
   methods: {
+    scrollToBottom () {
+      scrollTo(
+        0,
+        document.body.scrollHeight
+      )
+    },
+    scrollToTop () {
+      console.log('hi')
+      scrollTo(0, 0)
+    },
     initDB() {
       const adapter = new LocalStorage("todo-app") //db 이름이 todoapp
       this.db = low(adapter)
@@ -219,7 +240,7 @@ export default {
           this.deleteTodo(todo)
         }
       })
-    }
+    },
   },
 }
 </script>
