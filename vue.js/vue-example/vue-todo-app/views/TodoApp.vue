@@ -27,10 +27,10 @@
           </label>
         </div>
         <div class="float--right clearfix">
-          <button @click="scrollToTop" class="btn float--left">
+          <button  class="btn float--left">
             <i class="material-icons">expand_less</i>
           </button>
-          <button @click="scrollToBottom" class="btn float--left">
+          <button  class="btn float--left">
             <i class="material-icons">expand_more</i>
           </button>
           <button class="btn btn--danger float--left" @click="clearCompleted">
