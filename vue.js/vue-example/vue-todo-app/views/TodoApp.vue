@@ -67,9 +67,9 @@ import _find from 'lodash/find'
 import _assign from 'lodash/assign'
 import _findIndex from 'lodash/findIndex'
 import _forEachRight from 'lodash/forEachRight'
-import scrollTo from 'scroll-to'
-import TodoCreator from './TodoCreator'
-import TodoItem from './TodoItem'
+// import scrollTo from 'scroll-to'
+import TodoCreator from '~/components/TodoCreator' // 절대경로 설정
+import TodoItem from '~/components/TodoItem'
 
 export default {
   name: 'TodoApp',
@@ -119,16 +119,16 @@ export default {
     this.initDB()
   },
   methods: {
-    scrollToBottom () {
-      scrollTo(
-        0,
-        document.body.scrollHeight
-      )
-    },
-    scrollToTop () {
-      console.log('hi')
-      scrollTo(0, 0)
-    },
+    // scrollToBottom () {
+    //   scrollTo(
+    //     0,
+    //     document.body.scrollHeight
+    //   )
+    // },
+    // scrollToTop () {
+    //   console.log('hi')
+    //   scrollTo(0, 0)
+    // },
     initDB() {
       const adapter = new LocalStorage("todo-app") //db 이름이 todoapp
       this.db = low(adapter)
@@ -246,5 +246,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../scss/style"
+  @import "scss/style"
 </style>

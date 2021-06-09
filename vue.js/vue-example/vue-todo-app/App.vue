@@ -1,13 +1,4 @@
 <template>
-  <todo-app />
+  <!-- 각 페이지들의 출력되는 영역 설정 -->
+  <router-view />
 </template>
-
-<script>
-import TodoApp from './components/TodoApp'
-
-export default {
-  components: {
-    TodoApp
-  }
-}
-</script>
