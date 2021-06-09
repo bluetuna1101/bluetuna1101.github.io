@@ -3,6 +3,7 @@ import Vue from 'vue'
 // main.js 진입점 
 // App.vue 연결할것임 (최상위 컴포넌트) 한번만 연결하면 되게 설정할것임
 import App from './App.vue'
+import router from './router'
 
 new Vue({
   el: '#app',
@@ -10,5 +11,6 @@ new Vue({
   // render (createElement) {
   //   return createElement(App)
   // },
+  router,
   render: h => h(App)
 })
