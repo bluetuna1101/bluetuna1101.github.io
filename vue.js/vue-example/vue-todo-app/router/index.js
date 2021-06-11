@@ -22,6 +22,7 @@ const routes = [
   {
     name: 'todos',
     path: '/todos',
+    redirect: '/todos/all', // todos로 접근하면 todos/all로 접근해라 !
     component: TodoApp,
     // 파라미터 작성
     children: [{

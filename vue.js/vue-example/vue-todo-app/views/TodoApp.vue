@@ -3,21 +3,24 @@
 
     <div class="todo-app__actions">
       <div class="filters">
-        <button
-          :class="{ active: filter === 'all'}"
-          @click="changeFilter('all')">
-          all ({{ total }})
-        </button>
-        <button 
-          :class="{ active: filter === 'active'}"
-          @click="changeFilter('active')">
-          to-do ({{ activeCount }})
-        </button>
-        <button 
-          :class="{ active: filter === 'completed'}"
-          @click="changeFilter('completed')">
-          finish ({{ completedCount }})
-        </button>
+        <router-link
+          to="all"
+          tag="button"
+        >
+          모든 항목 ({{ total }})
+        </router-link>
+        <router-link
+          to="active"
+          tag="button"
+        >
+          해야 할 항목 ({{ activeCount }})
+        </router-link>
+        <router-link
+          to="completed"
+          tag="button"
+        >
+          완료된 항목 ({{ completedCount }})
+        </router-link>
       </div>
       <div class="actions clearfix">
         <div class="float--left">
@@ -81,13 +84,13 @@ export default {
     return {
       db: null,
       todos: [],
-      filter: 'all'
     }
   },
   computed: {
     // todos 필터링 하기
     filteredTodos() {
-      switch(this.filter) {
+      //route 의 params로 각 페이지 분기
+      switch (this.$route.params.id) {
         case 'all':
         default:
           return this.todos
@@ -196,9 +199,6 @@ export default {
       // vue api delete 객체의 속성을 삭제(객체가 반응형이면 뷰 업데이트를 발생)
       this.$delete(this.todos, foundIndex)
     },
-    changeFilter (filter) {
-      this.filter = filter
-    },
     completeAll(checkd) {
       // DB 갱신
       const newTodos = this.db
@@ -246,5 +246,10 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "scss/style"
+  @import "scss/style";
+
+  .filters button.router-link-active {
+    background: royalblue;
+    color: #fff;
+  }
 </style>
