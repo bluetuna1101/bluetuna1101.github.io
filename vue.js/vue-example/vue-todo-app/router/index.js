@@ -10,20 +10,28 @@ Vue.use(VueRouter)
 const routes = [
   //config
   {
+    name: 'index',
     path: '/', // 사이트의 루트페이지 
     component: Home
   },
   {
+    name: 'about',
     path: '/about',
     component: About
   },
   {
+    name: 'todos',
     path: '/todos',
-    component: TodoApp
+    component: TodoApp,
+    // 파라미터 작성
+    children: [{
+      name: 'todos-filter',
+      path: ':id'
+    }]
   }
 ]
 
 export default new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes
 })
