@@ -4,6 +4,7 @@ import Vue from 'vue'
 // App.vue 연결할것임 (최상위 컴포넌트) 한번만 연결하면 되게 설정할것임
 import App from './App.vue'
 import router from './router'
+import store from './store/index.js'
 
 new Vue({
   el: '#app',

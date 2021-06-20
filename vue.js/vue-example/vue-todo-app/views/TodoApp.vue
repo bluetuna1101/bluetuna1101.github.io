@@ -80,12 +80,7 @@ export default {
     TodoCreator,
     TodoItem
   },
-  data() {
-    return {
-      db: null,
-      todos: [],
-    }
-  },
+
   computed: {
     // todos 필터링 하기
     filteredTodos() {
@@ -132,26 +127,7 @@ export default {
     //   console.log('hi')
     //   scrollTo(0, 0)
     // },
-    initDB() {
-      const adapter = new LocalStorage("todo-app") //db 이름이 todoapp
-      this.db = low(adapter)
 
-      const hasTodos = this.db
-      .has('todos') // Collection name
-      .value() // has lodash 에서 db가 있는지 확인하는 메서드 .value -> 값을 뽑아냄
-
-      if(hasTodos) {
-      this.todos  = _cloneDeep(this.db.getState().todos) // getState 가져와라 _cloneDeep 참조까지 깊은복사해오기
-      } else {
-        // Local DB 초기화
-        this.db
-          .defaults({
-            todos: [], // Collection
-          })
-          .write()
-      }
-
-    },
     createTodo (title) {
       const newTodo = {
         id: cryptoRandomString({ length: 10}),

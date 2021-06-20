@@ -22,3 +22,9 @@ query 주소에 ? 로 정보를 담아서 전송할수 있음 키 밸류 형태�
 ex: http://localhost:8080/#/todos?name=bluetuna&age=29&email=bluetuna1101
 
 params:
+
+
+### vuex
+State : 
+Getters :
+
