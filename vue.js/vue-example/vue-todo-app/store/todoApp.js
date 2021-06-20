@@ -6,7 +6,17 @@ export default {
     db: null,
     todos: [],
   }),
-  getters: {},
+  getters: {
+    total(state) {
+      return state.todos.length
+    },
+    activeCount(state) {
+      return state.todos.filter(todo => !todo.done).length
+    },
+    completedCount(state, getters) {
+      return getters.total - getters.activeCount
+    },
+  },
   mutations: {
     assignDB(state, db) {
       state.db = db
