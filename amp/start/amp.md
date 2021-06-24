@@ -14,7 +14,15 @@ AMP 라이브러리 및 페이지에 있는 AMP 구성요소용으로 자바스�
 7. AMP CSS 상용구 포함: article.amp.html 참조
 - <style amp-boilerplate> tag 를 사용 시 자바스크립 라이브러리가 로드될 때 까지 본문 컨텐츠를 숨기며, 그 다음 렌더링 됨. , 즉 FOUC(Flash Of Unstyled Content)를 방지하기 위해 이러한 작업을 수행
 - </style><noscript><style amp-boilerplate> 태그는 자바스크립트가 브라우저에서 사용 중지된 경우 이 논리를 되돌림
+8. 구조적 데이터 추가
+- 구조적 데이터를 사용하면 검색엔진이 웹페이지를 더 잘 이해할 수 있고 검색엔진 검색 결과(예: 리치 스니펫)에 콘텐츠를 더 잘 표시할 수 있음
+- 구조적 데이터 유효성 검사 https://search.google.com/structured-data/testing-tool -> 코드 스니펫
 
+### 표준 html 페이지와 amp html페이지 페어링
+1. html페이지에  amp페이지 연결
+- <link rel="amphtml" href="/article.amp.html" />
+2. 반대로 amp페이지에 표준 html 페이지 연결
+- <link rel="canonical" href="/article.html" />
 
 ### 필수 마크업
 
