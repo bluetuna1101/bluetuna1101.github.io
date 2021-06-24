@@ -8,3 +8,15 @@
 참고 : https://amp.dev/ko/documentation/guides-and-tutorials/learn/spec/amphtml/?format=websites
 - style 은 <style amp-custom> 모든 AMP 페이지에는 하나의 스타일시트 및 인라인 스타일만 삽입할 수 있으며, 특정 선택자는 사용 불가 
 참고 : https://amp.dev/ko/documentation/guides-and-tutorials/develop/style_and_layout/style_pages/?format=websites
+- link 연결 
+비 amp 페이지 <link rel="amphtml" href="https://www.example.com/url/to/amp/document.html">
+amp 페이지  <link rel="canonical" href="https://www.example.com/url/to/full/document.html">
+
+
+### 허용되지 않는 스타일
+- !important
+- transition, @keyframes는 opacity만 허용
+
+
+#### 유효성 검사
+- url 에 #development=amp4email 추가해보기
