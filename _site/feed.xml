@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://bluetuna1101.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://bluetuna1101.github.io//" rel="alternate" type="text/html" /><updated>2021-07-30T16:51:38+09:00</updated><id>https://bluetuna1101.github.io//feed.xml</id><title type="html">푸른참치</title><subtitle>블루투나 블로그 입니다</subtitle><entry><title type="html">Github 개인 블로그 만들기 (1 - 레포지토리 생성)</title><link href="https://bluetuna1101.github.io//github/github%20blog/jekyll/2021/07/30/Github-%EA%B0%9C%EC%9D%B8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-(1-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EC%83%9D%EC%84%B1)/" rel="alternate" type="text/html" title="Github 개인 블로그 만들기 (1 - 레포지토리 생성)" /><published>2021-07-30T00:00:00+09:00</published><updated>2021-07-30T00:00:00+09:00</updated><id>https://bluetuna1101.github.io//github/github%20blog/jekyll/2021/07/30/Github%20%EA%B0%9C%EC%9D%B8%20%EB%B8%94%EB%A1%9C%EA%B7%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0%20(1%20-%20%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC%20%EC%83%9D%EC%84%B1)</id><content type="html" xml:base="https://bluetuna1101.github.io//github/github%20blog/jekyll/2021/07/30/Github-%EA%B0%9C%EC%9D%B8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-(1-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EC%83%9D%EC%84%B1)/">&lt;ol&gt;
+  &lt;li&gt;블로그 페이지로 활용할 개인 레포지토리를 만들어준다&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;레포지토리 이름은 자기 account 계정 + github.io로 만들어주는게 좋다고함&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;퍼블릭으로 만들어야 함&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;로컬에 레포지토리를 클론 받는다&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;코드에서 클론 받을 주소를 선택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;클론 받을 디렉토리로 이동 후 아래 명령어 입력 (HTTPS방식으로 진행했음)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;git-clone-명령어로-레포지토리-내려받기&quot;&gt;git clone 명령어로 레포지토리 내려받기&lt;/h1&gt;
+&lt;p&gt;$ git clone https://github.com/bluetuna1101/bluetuna1101.github.io.git
+Cloning into ‘bluetuna1101.github.io’…
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.&lt;/p&gt;
+
+&lt;h1 id=&quot;클론된-레포지토리-확인&quot;&gt;클론된 레포지토리 확인&lt;/h1&gt;
+&lt;p&gt;$ ls
+bluetuna1101.github.io&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;연결 확인&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;클론 받은 레포지토리에 테스트용 index.html 작성&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;원격 레포지토리에 push!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;설정했던 레포지토리 이름 url에 검색&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;성공한 모습!&lt;/p&gt;</content><author><name></name></author><category term="Github" /><category term="Github Blog" /><category term="Jekyll" /><summary type="html">블로그 페이지로 활용할 개인 레포지토리를 만들어준다</summary></entry><entry><title type="html">새 글입니다 !</title><link href="https://bluetuna1101.github.io//content/test/2021/07/30/new-post/" rel="alternate" type="text/html" title="새 글입니다 !" /><published>2021-07-30T00:00:00+09:00</published><updated>2021-07-30T00:00:00+09:00</updated><id>https://bluetuna1101.github.io//content/test/2021/07/30/new-post</id><content type="html" xml:base="https://bluetuna1101.github.io//content/test/2021/07/30/new-post/">&lt;h2 id=&quot;새-글-테스트-해-봅시다-&quot;&gt;새 글 테스트 해 봅시다 !&lt;/h2&gt;
+
+&lt;h3 id=&quot;새글이란&quot;&gt;새글이란?&lt;/h3&gt;
+&lt;p&gt;새 글은 새(bird)가 쓴 글로서 매우 보기 힘든 휘귀한 자료입니다.&lt;/p&gt;
+
+&lt;p&gt;마크다운 못쓰면 블로그 꾸미기 힘들겠는데요?&lt;/p&gt;
+
+&lt;p&gt;감사합니다&lt;/p&gt;</content><author><name></name></author><category term="content" /><category term="test" /><summary type="html">새 글 테스트 해 봅시다 !</summary></entry><entry><title type="html">Git commit 가이드</title><link href="https://bluetuna1101.github.io//content/git/2021/07/30/notion-test/" rel="alternate" type="text/html" title="Git commit 가이드" /><published>2021-07-30T00:00:00+09:00</published><updated>2021-07-30T00:00:00+09:00</updated><id>https://bluetuna1101.github.io//content/git/2021/07/30/notion-test</id><content type="html" xml:base="https://bluetuna1101.github.io//content/git/2021/07/30/notion-test/">&lt;h1 id=&quot;git-commit-가이드&quot;&gt;Git commit 가이드&lt;/h1&gt;
+
+&lt;p&gt;공유: 박상민, Daeup Kim, 서원익, TAXTALK 파스칼, TAXTALK Pooh
+상태: 진행 중
+속성: GIT
+작성일: July 26, 2021 12:25 PM
+작성자: hyun chul Lee
+최종 편집 일시: July 27, 2021 10:29 PM
+최종 편집자: hyun chul Lee&lt;/p&gt;
+
+&lt;h3 id=&quot;git-commit-message&quot;&gt;Git commit message&lt;/h3&gt;
+
+&lt;p&gt;HEAD 에 반영된 변화에 대한 설명&lt;/p&gt;
+
+&lt;p&gt;공동작업을 위한 일원화 된 commit message rule 필요&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to&quot;&gt;How to&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;커밋 유형 지정&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;제목&lt;/strong&gt;
+    &lt;ol&gt;
+      &lt;li&gt;‘커밋유형 : 텍스트’ 형태 사용&lt;/li&gt;
+      &lt;li&gt;한 행으로 50자&lt;/li&gt;
+      &lt;li&gt;첫 글자 대문자 시작&lt;/li&gt;
+      &lt;li&gt;마침표 종료 금지&lt;/li&gt;
+      &lt;li&gt;명령문 사용&lt;/li&gt;
+      &lt;li&gt;커밋 유형 지정
+        &lt;ul&gt;
+          &lt;li&gt;FEAT : 새로운 기능의 추가&lt;/li&gt;
+          &lt;li&gt;FIX: 버그 수정&lt;/li&gt;
+          &lt;li&gt;DOCS: 문서 수정&lt;/li&gt;
+          &lt;li&gt;STYLE: 스타일 관련 기능(코드 포맷팅, 세미콜론 누락, 코드 자체의 변경이 없는 경우)&lt;/li&gt;
+          &lt;li&gt;REFACTOR: 코드 리펙토링&lt;/li&gt;
+          &lt;li&gt;TEST: 테스트 코트, 리펙토링 테스트 코드 추가&lt;/li&gt;
+          &lt;li&gt;CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같은 경우)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;제목과 본문을 빈 행으로 분리&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;본문&lt;/strong&gt;
+    &lt;ol&gt;
+      &lt;li&gt;행단위 72자 limit&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;hanging/negative indent 사용&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;Git%20commit%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%20d59fd79400ad47fb92039762d7433339/Untitled.png&quot; alt=&quot;Git%20commit%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%20d59fd79400ad47fb92039762d7433339/Untitled.png&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;변경한 내용과 이유 설명 (what, why better then how)&lt;/li&gt;
+      &lt;li&gt;확실하게 설명 추가 (검토자가 할머니라고 생각할 것)&lt;/li&gt;
+      &lt;li&gt;코드 자체로 의미 전달하려고 하지 말 것&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;팀에서 정한 Commit 규칙을 따르자&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;git-commit-template-적용하기&quot;&gt;GIT commit template 적용하기&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;작성
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;절대경로&lt;/p&gt;
+
+        &lt;p&gt;ex) /Users/taxtalk/Desktop/taxly/.gitmessage&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;상대경로&lt;/p&gt;
+
+        &lt;p&gt;git repository root 부터 시작&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;config 적용
+    &lt;ul&gt;
+      &lt;li&gt;git config –global commit.template &lt;template 파일명=&quot;&quot;&gt;&lt;/template&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ver 0.1&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;이내&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;문장끝&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;마침표&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;금지&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;feat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;로그인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기능&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blank&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;제목&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;본문&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;분리&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;하단&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;공백&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;유지&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;여러&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;줄의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;메시지를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;작성할&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;땐&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;구분&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;한&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;줄은&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;이내&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;footer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;현재&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;커밋과&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;관련된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;이슈&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;번호&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Close&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;😄&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;feat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;새로운&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기능&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;버그&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수정&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;docs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;문서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수정&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;코드&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refact&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;코드&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;리팩토링&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;코드&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;의미에&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;영향을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;주지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;않는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변경사항&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chore&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;부분&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;혹은&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;패키지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;매니저&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수정사항&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="content" /><category term="git" /><summary type="html">Git commit 가이드</summary></entry><entry><title type="html">Hello World</title><link href="https://bluetuna1101.github.io//content/demo/2021/07/15/hello-world/" rel="alternate" type="text/html" title="Hello World" /><published>2021-07-15T00:00:00+09:00</published><updated>2021-07-15T00:00:00+09:00</updated><id>https://bluetuna1101.github.io//content/demo/2021/07/15/hello-world</id><content type="html" xml:base="https://bluetuna1101.github.io//content/demo/2021/07/15/hello-world/">&lt;p&gt;Hello and welcome. The only purpose of this post is to greet you when your site comes alive for the first time.&lt;br /&gt;
+This post will demonstrate some of the more common content &amp;amp; elements found in posts.&lt;br /&gt;
+Feel free to delete this post when you are ready to publish your first post.&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-great-heading-h2&quot;&gt;Some great heading (h2)&lt;/h2&gt;
+
+&lt;p&gt;Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.&lt;/p&gt;
+
+&lt;p&gt;Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;h2 id=&quot;another-great-heading-h2&quot;&gt;Another great heading (h2)&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-great-subheading-h3&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
+
+&lt;p&gt;Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.&lt;/p&gt;
+
+&lt;p&gt;Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-great-subheading-h3-1&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
+
+&lt;p&gt;Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This quote will &lt;em&gt;change&lt;/em&gt; your life. It will reveal the &lt;i&gt;secrets&lt;/i&gt; of the universe, and all the wonders of humanity. Don’t &lt;em&gt;misuse&lt;/em&gt; it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-great-subheading-h3-2&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
+
+&lt;p&gt;Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.&lt;/p&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h4 id=&quot;you-might-want-a-sub-subheading-h4&quot;&gt;You might want a sub-subheading (h4)&lt;/h4&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h4 id=&quot;but-its-probably-overkill-h4&quot;&gt;But it’s probably overkill (h4)&lt;/h4&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h5 id=&quot;could-be-a-smaller-sub-heading-pacman-h5&quot;&gt;Could be a smaller sub-heading, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pacman&lt;/code&gt; (h5)&lt;/h5&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h6 id=&quot;small-yet-significant-sub-heading--h6&quot;&gt;Small yet significant sub-heading  (h6)&lt;/h6&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h3 id=&quot;highlight-the-code-please&quot;&gt;Highlight the code please!!&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Q_rsqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threehalfs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;c1&quot;&gt;// evil floating point bit level hacking&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x5f3759df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;// what the fuck? &lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threehalfs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 1st iteration&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//	y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;oh-hai-an-unordered-list&quot;&gt;Oh hai, an unordered list!!&lt;/h3&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First item, yo&lt;/li&gt;
+  &lt;li&gt;Second item, dawg&lt;/li&gt;
+  &lt;li&gt;Third item, what what?!&lt;/li&gt;
+  &lt;li&gt;Fourth item, fo sheezy my neezy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;oh-hai-an-ordered-list&quot;&gt;Oh hai, an ordered list!!&lt;/h3&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First item, yo&lt;/li&gt;
+  &lt;li&gt;Second item, dawg&lt;/li&gt;
+  &lt;li&gt;Third item, what what?!&lt;/li&gt;
+  &lt;li&gt;Fourth item, fo sheezy my neezy&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;headings-are-cool-h2&quot;&gt;Headings are cool! (h2)&lt;/h2&gt;
+
+&lt;p&gt;Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;p&gt;Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;p&gt;Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.&lt;/p&gt;
+
+&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Title 1&lt;/th&gt;
+      &lt;th&gt;Title 2&lt;/th&gt;
+      &lt;th&gt;Title 3&lt;/th&gt;
+      &lt;th&gt;Title 4&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem&lt;/td&gt;
+      &lt;td&gt;lorem ipsum&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Title 1&lt;/th&gt;
+      &lt;th&gt;Title 2&lt;/th&gt;
+      &lt;th&gt;Title 3&lt;/th&gt;
+      &lt;th&gt;Title 4&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem&lt;/td&gt;
+      &lt;td&gt;lorem ipsum&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem ipsum dolor sit amet&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit amet consectetur&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit amet&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
+      &lt;td&gt;lorem ipsum&lt;/td&gt;
+      &lt;td&gt;lorem&lt;/td&gt;
+      &lt;td&gt;lorem ipsum&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit amet&lt;/td&gt;
+      &lt;td&gt;lorem ipsum dolor sit amet consectetur&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><category term="content" /><category term="demo" /><summary type="html">Hello and welcome. The only purpose of this post is to greet you when your site comes alive for the first time. This post will demonstrate some of the more common content &amp;amp; elements found in posts. Feel free to delete this post when you are ready to publish your first post.</summary></entry></feed>
