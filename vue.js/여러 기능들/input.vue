@@ -1,7 +1,7 @@
 <template>
   <div>
     <input v-model="price" type="text" />
-    <textarea id="text" class="font-15r" v-model="content" type="text"></textarea>
+    <textarea id="text" @input="autoResize" class="font-15r" v-model="content" type="text"></textarea>
   </div>
 </template>
 
@@ -13,6 +13,13 @@ export default {
       content: ''
     }
   },
+  methods: {
+    // textarea 크기 자동 조절
+    autoResize(e) {
+      e.target.style.height = 'auto'
+      e.target.style.height = `${e.target.scrollHeight}px`
+    }
+  },
   watch: {
     // 입력시 원단위로 분리
     price(val) {
@@ -21,14 +28,6 @@ export default {
           .replace(/[^0-9]/g, '')
           .replace(/(^0+)/, '')
           .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    },
-    // 솔루션 입력 길어지면 입력창 높이 키우기
-    content() {
-      const scrollHeight = document.querySelector('#text').scrollHeight
-      const offsetHeight = document.querySelector('#text').offsetHeight
-      if (scrollHeight >= offsetHeight) {
-        document.querySelector('#text').style.height = `${scrollHeight}px`
-      }
     }
   }
 }
